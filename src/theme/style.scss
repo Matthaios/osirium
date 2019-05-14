@@ -1,0 +1,28 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 800px,
+  xl: 900px,
+);
+
+$theme-colors: map-merge(
+  (
+    "primary": #9f1d35,
+    "dark": #003153,
+    "black": #003153,
+  ),
+  $theme-colors
+);
+
+$link-hover-color: lighten($link-color, 5%);
+$link-hover-decoration: none;
+
+$font-size-base: 1.1rem; // Assumes the browser, typically `16px`
+$font-size-lg: $font-size-base * 1.25;
+$font-size-sm: $font-size-base * 0.875;
+
+@import "node_modules/bootstrap/scss/bootstrap";
