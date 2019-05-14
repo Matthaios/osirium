@@ -7,18 +7,22 @@ const IndexPage = ({
   data: {
     all: { articles },
   },
-}) => (
-  <Layout>
-    {articles.map(article => (
-      <div className="py-2 px-4 py-md-3 px-md-5" key={article.slug}>
-        <h2>
-          <Link to={article.slug}>{article.title}</Link>
-        </h2>
-        <p className="">{article.excerpt.excerpt}</p>
+}) => {
+  return (
+    <Layout>
+      <div className="d-flex flex-column-reverse">
+        {articles.map(article => (
+          <div className="py-2 px-4 py-md-3 px-md-5" key={article.slug}>
+            <h2>
+              <Link to={article.slug}>{article.title}</Link>
+            </h2>
+            <p className="">{article.excerpt.excerpt}</p>
+          </div>
+        ))}
       </div>
-    ))}
-  </Layout>
-)
+    </Layout>
+  )
+}
 
 export default IndexPage
 
